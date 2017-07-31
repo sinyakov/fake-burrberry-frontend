@@ -155,7 +155,9 @@
 }
 
 .detail__header {
-  margin: 0;
+  position: relative;
+
+  margin: 0 0 0;
 
   font-weight: 500;
   font-size: 14px;
@@ -163,10 +165,44 @@
   font-family: Raleway;
   color: #171717;
   text-transform: uppercase;
+}
+
+.detail__header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 10px;
+  height: 16px;
 
   background-image: url(../img/triangle.svg);
   background-repeat: no-repeat;
   background-position: center right;
+}
+
+.detail--active .detail__header::after {
+  transform: rotate(-180deg);
+}
+
+.detail__descr {
+  margin: 32px 0 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: Lora;
+  color: #171717;
+}
+
+.detail__descr p {
+  margin: 0;
+}
+
+.detail__descr ul {
+  margin: 24px 0 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .recommendations {
