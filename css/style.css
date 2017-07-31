@@ -204,10 +204,11 @@
 }
 
 .recommendations__link {
-  color: #111111;
-  text-decoration: none;
   display: flex;
   flex-direction: column;
+
+  color: #111111;
+  text-decoration: none;
 }
 
 .recommendations__item-image {
@@ -287,10 +288,18 @@
 
 .main-footer__country {
   margin: 0 0 16px;
+  padding: 0;
+
+  background: inherit;
+  border: 0;
 }
 
 .main-footer__language {
   margin: 0 0 24px;
+  padding: 0;
+
+  background: inherit;
+  border: 0;
 }
 
 .main-footer__contact {
