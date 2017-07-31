@@ -1,3 +1,8 @@
+body {
+  font-size: 16px;
+  font-family: Raleway, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
 .main-header {
   font-size: 0;
   text-align: center;
@@ -17,7 +22,7 @@
 }
 
 .card__title {
-  margin: 24px 18px;
+  margin: 24px 16px;
 
   font-weight: 400;
   font-size: 14px;
@@ -29,14 +34,13 @@
 .card__info {
   position: relative;
 
-  margin: 24px 18px 16px;
+  margin: 24px 16px 16px;
 }
 
 .card__price {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  font-family: Raleway;
   color: #111111;
 }
 
@@ -49,7 +53,6 @@
 
   font-size: 12px;
   line-height: 21px;
-  font-family: Raleway;
   color: #171717;
 }
 
@@ -68,7 +71,6 @@
 .colour__current {
   font-size: 12px;
   line-height: 14px;
-  font-family: Raleway;
   color: #171717;
 }
 
@@ -107,7 +109,6 @@
 
   font-size: 12px;
   line-height: 12px;
-  font-family: Raleway;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -120,12 +121,11 @@
 .find-in-store {
   box-sizing: border-box;
   width: calc(100% - 32px);
-  margin: 0 16px 24px;
+  margin: 0 16px 22px;
   padding: 15px 0;
 
   font-size: 12px;
   line-height: 12px;
-  font-family: Raleway;
   text-align: center;
   text-transform: uppercase;
 
@@ -139,8 +139,7 @@
   padding: 0;
 
   font-size: 12px;
-  line-height: 12px;
-  font-family: Raleway;
+  line-height: 14px;
   color: #171717;
   text-transform: uppercase;
 
@@ -162,7 +161,6 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  font-family: Raleway;
   color: #171717;
   text-transform: uppercase;
 }
@@ -217,7 +215,6 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  font-family: Raleway;
   color: #171717;
   text-transform: uppercase;
 
@@ -267,7 +264,6 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  font-family: Raleway;
   color: #999999;
 }
 
@@ -284,7 +280,6 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  font-family: Raleway;
   color: #171717;
   text-transform: uppercase;
 
@@ -299,7 +294,7 @@
 }
 
 .more__item {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 }
 
 .more__link {
@@ -316,7 +311,6 @@
 
   font-size: 12px;
   line-height: 14px;
-  font-family: Raleway;
   color: #999999;
 
   background-color: #f3f3f3;
@@ -350,7 +344,6 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
-  font-family: Raleway;
 }
 
 .main-footer__find-out {
