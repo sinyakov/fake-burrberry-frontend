@@ -22,11 +22,11 @@ body {
 }
 
 .card__title {
-  margin: 24px 16px;
+  margin: 16px;
 
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 20px;
+  line-height: 24px;
   font-family: Lora;
   color: #111111;
 }
@@ -34,13 +34,13 @@ body {
 .card__info {
   position: relative;
 
-  margin: 24px 16px 16px;
+  margin: 16px;
 }
 
 .card__price {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 20px;
   color: #111111;
 }
 
@@ -52,7 +52,7 @@ body {
   margin: 0;
 
   font-size: 12px;
-  line-height: 21px;
+  line-height: 20px;
   color: #171717;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .colour {
-  margin: 0 18px;
+  margin: 0 16px;
   padding-bottom: 16px;
 
   border-bottom: solid 1px #c6c6c6;
@@ -70,13 +70,13 @@ body {
 
 .colour__current {
   font-size: 12px;
-  line-height: 14px;
+  line-height: 12px;
   color: #171717;
 }
 
 .colour__options {
   display: flex;
-  margin: 16px 0;
+  margin: 17px 0 16px;
 }
 
 .colour__option {
@@ -85,8 +85,10 @@ body {
   height: 40px;
   margin-right: 16px;
 
+  font-size: 0;
+
   border: none;
-  border-radius: 100px;
+  border-radius: 50%;
 }
 
 .colour__option--active {
@@ -105,7 +107,7 @@ body {
   box-sizing: border-box;
   width: calc(100% - 32px);
   margin: 32px 16px 16px;
-  padding: 15px 0;
+  padding: 16px 0;
 
   font-size: 12px;
   line-height: 12px;
@@ -121,8 +123,8 @@ body {
 .find-in-store {
   box-sizing: border-box;
   width: calc(100% - 32px);
-  margin: 0 16px 22px;
-  padding: 15px 0;
+  margin: 0 16px 20px;
+  padding: 16px 0;
 
   font-size: 12px;
   line-height: 12px;
@@ -148,7 +150,7 @@ body {
 }
 
 .detail {
-  padding: 30px 16px 31px;
+  padding: 32px 16px;
 
   border-bottom: solid 1px #c6c6c6;
 }
@@ -156,11 +158,11 @@ body {
 .detail__header {
   position: relative;
 
-  margin: 0 0 0;
+  margin: 0;
 
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 20px;
   color: #171717;
   text-transform: uppercase;
 }
@@ -172,7 +174,7 @@ body {
   right: 0;
 
   width: 10px;
-  height: 16px;
+  height: 20px;
 
   background-image: url(../img/triangle.svg);
   background-repeat: no-repeat;
@@ -204,17 +206,17 @@ body {
 }
 
 .recommendations {
-  padding: 45px 16px 0;
+  padding: 48px 16px 0;
 }
 
 .recommendations__header {
   display: inline-block;
-  margin: 0 0 32px;
+  margin: 0 0 24px;
   padding-bottom: 8px;
 
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 20px;
   color: #171717;
   text-transform: uppercase;
 
@@ -232,7 +234,7 @@ body {
 }
 
 .recommendations__item {
-  width: 45.13888889%;  /* 130 / 320 */
+  width: 130px;
   margin: 0 0 32px;
 }
 
@@ -245,15 +247,16 @@ body {
 }
 
 .recommendations__item-image {
-  max-width: 100%;
+  width: 130px;
+  height: 174px;
 }
 
 .recommendations__item-title {
-  margin: 12px 0 8px;
+  margin: 8px 0;
 
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 20px;
   font-family: Lora;
   color: #111111;
 }
@@ -278,8 +281,8 @@ body {
   padding-bottom: 8px;
 
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 20px;
   color: #171717;
   text-transform: uppercase;
 
@@ -291,10 +294,11 @@ body {
   padding: 0;
 
   list-style: none;
+  font-size: 0;
 }
 
 .more__item {
-  margin: 0 0 14px;
+  margin: 0 0 16px;
 }
 
 .more__link {
@@ -311,7 +315,6 @@ body {
 
   font-size: 12px;
   line-height: 14px;
-  color: #999999;
 
   background-color: #f3f3f3;
 }
@@ -320,6 +323,8 @@ body {
   margin: 0 0 16px;
   padding: 0;
 
+  color: #999999;
+
   background: inherit;
   border: 0;
 }
@@ -327,6 +332,8 @@ body {
 .main-footer__language {
   margin: 0 0 24px;
   padding: 0;
+
+  color: #999999;
 
   background: inherit;
   border: 0;
@@ -342,14 +349,15 @@ body {
   margin: 0 0 16px;
 
   font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .main-footer__find-out {
   margin: 0;
 
   font-size: 14px;
+  line-height: 16px;
   font-family: Lora;
   font-style: italic;
 }
