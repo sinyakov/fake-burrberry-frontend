@@ -123,7 +123,7 @@ body {
 
 .colour__current {
   font-size: 0.75rem;
-  line-height: 1;
+  line-height: 1.16666667;
   color: #171717;
 }
 
@@ -163,10 +163,6 @@ body {
 @media (min-width: 48rem) {
   .colour {
     margin: 1rem 0.5rem 1em;
-  }
-
-  .colour__current {
-    line-height: 1.16666667;
   }
 }
 
@@ -291,6 +287,89 @@ body {
   list-style: none;
 }
 
+@media (min-width: 768px) {
+  .detail {
+    padding: 1.5rem 0.5rem;
+
+    border-bottom: none;
+  }
+
+  .detail__descr {
+    margin: 1rem 0 0;
+  }
+
+  .detail__header::after {
+    content: none;
+  }
+
+  .detail--shipping {
+    display: none;
+  }
+}
+
+.delivery {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .delivery {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .delivery__img {
+    width: 432px;
+    height: 324px;
+    margin: 0 0.5rem;
+  }
+
+  .delivery__info {
+    box-sizing: border-box;
+    width: 320px;
+    padding: 0 0.5rem;
+  }
+
+  .delivery__header {
+    margin: 0 0 1rem;
+
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #171717;
+    text-transform: uppercase;
+  }
+
+  .delivery__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    font-size: 0;
+  }
+
+  .delivery__item {
+    margin: 0 0 1.5rem;
+  }
+
+  .delivery__item:last-child {
+    margin: 0;
+  }
+
+  .delivery__item-header {
+    margin: 0 0 0.25rem;
+
+    font-size: 0.75rem;
+    line-height: 1.1666666667;
+  }
+
+  .delivery__item-text {
+    margin: 0;
+
+    font-size: 0.75rem;
+    line-height: 1.333333333;
+  }
+}
+
 .recommendations {
   padding: 3rem 1rem 0;
 }
@@ -356,6 +435,25 @@ body {
   color: #999999;
 }
 
+@media (min-width: 768px) {
+  .recommendations {
+    padding: 1.5rem 0.5rem 2rem;
+  }
+
+  .recommendations__header {
+    margin: 0 0 1rem;
+  }
+
+  .recommendations__item {
+    width: 176px;
+  }
+
+  .recommendations__item-image {
+    width: 175px;
+    height: 234px;
+  }
+}
+
 .more {
   margin: 0 0 4rem;
   padding: 1rem 1rem 0;
@@ -396,6 +494,12 @@ body {
   font-style: italic;
 }
 
+@media (min-width: 768px) {
+  .more {
+    display: none;
+  }
+}
+
 .main-footer {
   padding: 2rem 1rem;
 
@@ -406,9 +510,10 @@ body {
 }
 
 .main-footer__country {
-  margin: 0 0 1rem;
+  margin: 0 1.3125rem 1rem 0;
   padding: 0;
 
+  line-height: 1.333333333;
   font-family: Raleway;
   color: #999999;
 
@@ -420,6 +525,7 @@ body {
   margin: 0 0 1.5rem;
   padding: 0;
 
+  line-height: 1.333333333;
   font-family: Raleway;
   color: #999999;
 
@@ -448,4 +554,67 @@ body {
   line-height: 1.1428571429;
   font-family: Lora;
   font-style: italic;
+}
+
+.footer-menu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-footer {
+    padding: 2rem 0;
+  }
+
+  .main-footer__country {
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+  }
+
+  .main-footer__language {
+    margin-bottom: 0;
+  }
+
+  .main-footer__contact {
+    display: none;
+  }
+
+  .footer-menu {
+    display: flex;
+    margin: 0 0 2rem;
+  }
+
+  .footer-menu__col {
+    width: 176px;
+    margin: 0 0.5rem;
+  }
+
+  .footer-menu__header {
+    margin: 0 0 1rem;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .footer-menu__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .footer-menu__item {
+    margin: 0 0 0.75rem;
+
+    font-size: 0.75rem;
+    line-height: 1.33333333;
+  }
+
+  .footer-menu__item:last-child {
+    margin: 0;
+  }
+
+  .footer-menu__link {
+    color: #999999;
+    text-decoration: none;
+  }
 }
