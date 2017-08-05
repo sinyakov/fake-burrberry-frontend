@@ -444,8 +444,8 @@ body {
   background-color: #f3f3f3;
 }
 
-.main-footer__country {
-  margin: 0 1.3125rem 1rem 0;
+.main-footer__btn {
+  margin: 0;
   padding: 0;
 
   line-height: 1.333333333;
@@ -456,16 +456,12 @@ body {
   border: 0;
 }
 
-.main-footer__language {
+.main-footer__btn--country {
+  margin: 0 1.3125rem 1rem 0;
+}
+
+.main-footer__btn--language {
   margin: 0 0 1.5rem;
-  padding: 0;
-
-  line-height: 1.333333333;
-  font-family: Raleway;
-  color: #999999;
-
-  background: inherit;
-  border: 0;
 }
 
 .main-footer__contact {
@@ -500,12 +496,12 @@ body {
     padding: 2rem 0;
   }
 
-  .main-footer__country {
+  .main-footer__btn--country {
     margin-bottom: 0;
     margin-left: 0;
   }
 
-  .main-footer__language {
+  .main-footer__btn--language {
     margin-bottom: 0;
   }
 
