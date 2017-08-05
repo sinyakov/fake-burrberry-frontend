@@ -26,10 +26,6 @@ body {
   }
 }
 
-.card {
-  border-bottom: solid 1px #c6c6c6;
-}
-
 .card__title {
   margin: 1rem 0;
 
@@ -63,11 +59,14 @@ body {
   color: #171717;
 }
 
-@media (min-width: 48rem) {
-  .card {
-    border-bottom: none;
-  }
+.divine-line {
+  margin: 0 -0.5rem;
 
+  border: none;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+@media (min-width: 48rem) {
   .card__title {
     margin: 1.5rem 0;
 
@@ -80,6 +79,10 @@ body {
 
   .card__price {
     margin: 0;
+  }
+
+  .divine-line {
+    border-bottom: none;
   }
 }
 
@@ -207,8 +210,18 @@ body {
 
 .detail {
   padding: 2rem 0;
+}
 
-  border-bottom: solid 1px #c6c6c6;
+.detail__btn {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: Raleway;
+  text-align: left;
+
+  background: inherit;
+  border: none;
 }
 
 .detail__header {
@@ -264,8 +277,6 @@ body {
 @media (min-width: 768px) {
   .detail {
     padding: 1.5rem 0;
-
-    border-bottom: none;
   }
 
   .detail__descr {
