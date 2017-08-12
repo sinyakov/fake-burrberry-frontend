@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Gallery = styled.div`
-  margin: 4rem 0;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 
   div:nth-child(1) {
     margin-top: 2rem;
