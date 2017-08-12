@@ -6,7 +6,7 @@ import Slider from './Slider';
 import Info from './Info';
 import Colour from './Colour';
 import Buttons from './Buttons';
-import ButtonSize from './ButtonSize';
+import HelpButton from './HelpButton';
 import Size from './Size';
 import Details from './Details';
 import Delivery from './Delivery';
@@ -65,7 +65,7 @@ const Divine = styled.hr`
   }
 `;
 
-const activeColourId = 1;
+const activeColourIndex = 1;
 const colours = [
   {
     name: 'Black',
@@ -77,7 +77,7 @@ const colours = [
   }
 ];
 
-const activeSizeId = 3;
+const activeSizeIndex = 3;
 const sizes = ['S', 'M', 'L', 'XL'];
 
 export default () =>
@@ -108,14 +108,14 @@ export default () =>
             </LG>
             <Info />
             <Columns>
-              <Colour colours={colours} activeColourId={activeColourId} />
+              <Colour colours={colours} activeColourIndex={activeColourIndex} />
               <LG>
-                <Size sizes={sizes} activeSizeId={activeSizeId} />
+                <Size sizes={sizes} activeSizeIndex={activeSizeIndex} />
               </LG>
             </Columns>
             <Buttons />
             <XS>
-              <ButtonSize />
+              <HelpButton />
             </XS>
             <LG>
               <Delivery />

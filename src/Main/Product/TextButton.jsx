@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const Button = styled.button`
+export const TextButton = styled.button`
   margin: 0 0 3rem;
   padding: 0;
   font-size: 0.75rem;
@@ -21,5 +20,3 @@ const Button = styled.button`
     background-color: inherit;
   }
 `;
-
-export default () => <Button type="button">Need size help?</Button>;

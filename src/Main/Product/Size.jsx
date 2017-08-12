@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ButtonSize from './ButtonSize';
+import HelpButton from './HelpButton';
 
 const Size = styled.div`
   position: relative;
@@ -49,13 +49,20 @@ const Option = styled.button`
 export default props =>
   <Size>
     <Text>
-      Size: <SizeValue>{props.sizes[props.activeSizeId]}</SizeValue>
+      <span>Size: </span>
+      <SizeValue>
+        {props.sizes[props.activeSizeIndex]}
+      </SizeValue>
     </Text>
-    <ButtonSize />
+    <HelpButton />
 
     <Options>
-      {props.sizes.map((size, id) =>
-        <Option key={id} active={id === props.activeSizeId} type="button">
+      {props.sizes.map((size, index) =>
+        <Option
+          key={index}
+          active={index === props.activeSizeIndex}
+          type="button"
+        >
           {size}
         </Option>
       )}
