@@ -9,7 +9,11 @@ const Info = styled.div`
   @media (min-width: 48rem) {
     margin: 0 0 1em;
   }
-`
+
+  @media (min-width: 62rem) {
+    margin: 0 0 2.25em;
+  }
+`;
 
 const Price = styled.h2`
   margin: 0;
@@ -21,23 +25,21 @@ const Price = styled.h2`
   @media (min-width: 48rem) {
     margin: 0;
   }
-`
+`;
 
 const Code = styled.p`
   margin: 0;
   font-size: 0.75rem;
   line-height: 1.6666666667;
   color: #171717;
-`
 
+  @media (min-width: 62rem) {
+    display: none;
+  }
+`;
 
-export default () => (
+export default () =>
   <Info>
-    <Price>
-      110 000 руб.
-    </Price>
-    <Code>
-      Item 39428531
-    </Code>
-  </Info>
-)
+    <Price>110 000 руб.</Price>
+    <Code>Item 39428531</Code>
+  </Info>;

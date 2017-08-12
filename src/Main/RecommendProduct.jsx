@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Link = styled.a`
@@ -21,6 +21,12 @@ const Title = styled.h3`
   line-height: 1.25;
   font-family: Lora;
   color: #111111;
+
+  @media (min-width: 62rem) {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    line-height: 1.66666667;
+  }
 `;
 
 const Price = styled.h5`
@@ -29,19 +35,20 @@ const Price = styled.h5`
   font-size: 0.75rem;
   line-height: 1.1666666667;
   color: #999999;
+
+  @media (min-width: 62rem) {
+    font-size: 0.75rem;
+    line-height: 1.33333333;
+  }
 `;
 
-export default class RecommendProduct extends Component {
-  render() {
-    return (
-      <Link>
-        <Img
-          src={this.props.productImg}
-          alt={this.props.productTitle}
-        />
-        <Title>{this.props.productTitle}</Title>
-        <Price>{this.props.productPrice}</Price>
-      </Link>
-    )
-  }
-}
+export default props =>
+  <Link>
+    <Img src={props.image} alt={props.title} />
+    <Title>
+      {props.title}
+    </Title>
+    <Price>
+      {`${props.price} ${props.currency}`}
+    </Price>
+  </Link>;

@@ -3,9 +3,14 @@ import styled from 'styled-components';
 
 const Delivery = styled.header`
   display: none;
-  
-  @media (min-width: 768px) {
+
+  @media (min-width: 48rem) {
     display: block;
+    margin: 1.5rem 0;
+  }
+
+  @media (min-width: 62rem) {
+    margin-bottom: 2.5rem;
   }
 `;
 
@@ -25,7 +30,7 @@ const Header = styled.h2`
 
 const Message = styled.div`
   margin: 0 0 1.5rem;
-  
+
   &:last-child {
     margin: 0;
   }
@@ -43,34 +48,42 @@ const MessageText = styled.p`
   line-height: 1.333333333;
 `;
 
-
-export default () => (
+export default () =>
   <Delivery>
-      <div className="row">
-        <div className="col-md-7">
-          <Img src="../media/delivery.png" srcSet="media/delivery@2x.png 2x, media/delivery@3x.png 3x" alt="Delivery" />
-        </div>
-        <div className="col-md-5">
-          <Header>
-            Delivery
-          </Header>
-          <Message>
-            <MessageHeader>Free Next Day Delivery</MessageHeader>
-            <MessageText>Order before 7pm Monday to Thursday for delivery the next day</MessageText>
-          </Message>
-          <Message>
-            <MessageHeader>Collect-in-Store</MessageHeader>
-            <MessageText>Order online today and pick up your items in store as early as tomorrow</MessageText>
-          </Message>
-          <Message>
-            <MessageHeader>Free Returns</MessageHeader>
-            <MessageText>Enjoy free returns on your order</MessageText>
-          </Message>
-          <Message>
-            <MessageHeader>Free Gift Packaging</MessageHeader>
-            <MessageText>Discover our gift packaging, a gold lined box tied with a coloured ribbon</MessageText>
-          </Message>
-        </div>
+    <div className="row middle-lg">
+      <div className="col-md-7 col-lg-7">
+        <Img
+          src="../media/delivery.png"
+          srcSet="media/delivery@2x.png 2x, media/delivery@3x.png 3x"
+          alt="Delivery"
+        />
       </div>
-    </Delivery>
-)
+      <div className="col-md-5 col-lg-offset-1 col-lg-4">
+        <Header>Delivery</Header>
+        <Message>
+          <MessageHeader>Free Next Day Delivery</MessageHeader>
+          <MessageText>
+            Order before 7pm Monday to Thursday for delivery the next day
+          </MessageText>
+        </Message>
+        <Message>
+          <MessageHeader>Collect-in-Store</MessageHeader>
+          <MessageText>
+            Order online today and pick up your items in store as early as
+            tomorrow
+          </MessageText>
+        </Message>
+        <Message>
+          <MessageHeader>Free Returns</MessageHeader>
+          <MessageText>Enjoy free returns on your order</MessageText>
+        </Message>
+        <Message>
+          <MessageHeader>Free Gift Packaging</MessageHeader>
+          <MessageText>
+            Discover our gift packaging, a gold lined box tied with a coloured
+            ribbon
+          </MessageText>
+        </Message>
+      </div>
+    </div>
+  </Delivery>;

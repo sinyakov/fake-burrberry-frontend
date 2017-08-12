@@ -6,6 +6,10 @@ const Header = styled.header`
   font-size: 0;
   text-align: center;
   border-bottom: solid 1px #c6c6c6;
+
+  @media (min-width: 62rem) {
+    border-bottom: none;
+  }
 `;
 
 const HeaderLogo = styled.img`
@@ -17,12 +21,17 @@ const HeaderLogo = styled.img`
   @media (min-width: 48rem) {
     margin: 1.5rem auto;
   }
+
+  @media (min-width: 62rem) {
+    width: 221px;
+    height: 16px;
+    margin: 2rem auto;
+  }
 `;
 
-export default () => (
+export default () =>
   <Header>
     <a href="/">
       <HeaderLogo src={logo} alt="BURBERRY" />
     </a>
-  </Header>
-);
+  </Header>;

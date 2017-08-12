@@ -11,60 +11,64 @@ const Recommend = styled.section`
 `;
 
 const Heading = styled.h2`
-  display: inline-block;
-  margin: 0 0 1.5rem;
-  padding-bottom: 0.5rem;
+  margin: 0 0 1rem;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.25;
   color: #171717;
   text-transform: uppercase;
-  border-bottom: solid 1px #171717;
 
-  @media (min-width: 48rem) {
-    margin: 0 0 1rem;
+  @media (min-width: 62rem) {
+    margin: 0 0 2rem;
+    text-align: center;
   }
 `;
 
-export default () => {
-  const recommendations = [
-    {
-      productImg: 'https://assets.burberry.com/is/image/Burberryltd/f51a470fc157e3014a115c64276c2e124d9fc477.jpg?$BBY_V2_ML_3X4$&hei=314&wid=236',
-      productTitle: 'Emroided Hooded',
-      productPrice: '27 000 руб.'
-    },
-    {
-      productImg: 'https://assets.burberry.com/is/image/Burberryltd/eb872d02449c4050916c9eaf44e266bfdbd32304.jpg?$BBY_V2_ML_3X4$&hei=314&wid=236',
-      productTitle: 'Relaxed Fit Stretch Jeans',
-      productPrice: '22 500 руб.'
-    },
-    {
-      productImg: 'https://assets.burberry.com/is/image/Burberryltd/cfaeb1b3c79aeee09dfda4e26a9fb3f4525df542.jpg?$BBY_V2_SL_3X4$&hei=314&wid=236',
-      productTitle: 'Leather and House Check',
-      productPrice: '120 000 руб.'
-    },
-    {
-      productImg: 'https://assets.burberry.com/is/image/Burberryltd/b33127f06e6c404cc3168645e099a9eb71aeca9c.jpg?$BBY_V2_SL_3X4$&hei=314&wid=236',
-      productTitle: 'Leather Wingtip Check',
-      productPrice: '46 000 руб.'
-    }
-  ];
+const recommendations = [
+  {
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/f51a470fc157e3014a115c64276c2e124d9fc477.jpg?$BBY_V2_ML_3X4$&hei=379&wid=284',
+    title: 'Emroided Hooded',
+    price: 27000,
+    currency: 'руб.'
+  },
+  {
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/eb872d02449c4050916c9eaf44e266bfdbd32304.jpg?$BBY_V2_ML_3X4$&hei=379&wid=284',
+    title: 'Relaxed Fit Stretch Jeans',
+    price: 22500,
+    currency: 'руб.'
+  },
+  {
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/cfaeb1b3c79aeee09dfda4e26a9fb3f4525df542.jpg?$BBY_V2_SL_3X4$&hei=379&wid=284',
+    title: 'Leather and House Check',
+    price: 120000,
+    currency: 'руб.'
+  },
+  {
+    image:
+      'https://assets.burberry.com/is/image/Burberryltd/b33127f06e6c404cc3168645e099a9eb71aeca9c.jpg?$BBY_V2_SL_3X4$&hei=379&wid=284',
+    title: 'Leather Wingtip Check',
+    price: 46000,
+    currency: 'руб.'
+  }
+];
 
-  return (
-    <Recommend>
-      <Heading>We recommend</Heading>
+export default () =>
+  <Recommend>
+    <Heading>We recommend</Heading>
 
-      <div className="row">
+    <div className="row">
       {recommendations.map((item, id) =>
         <div className="col-xs-6 col-md-3" key={id}>
           <RecommendProduct
-            productImg={item.productImg}
-            productTitle={item.productTitle}
-            productPrice={item.productPrice}
+            image={item.image}
+            title={item.title}
+            price={item.price}
+            currency={item.currency}
           />
         </div>
       )}
-      </div>
-    </Recommend>
-  );
-}
+    </div>
+  </Recommend>;

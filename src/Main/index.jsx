@@ -5,11 +5,12 @@ import Recommend from './Recommend';
 import Delivery from './Delivery';
 import More from './More';
 
-export default () => (
-  <div className="container">
+export default () =>
+  <main>
     <Product />
-    <Delivery />
-    <Recommend />
-    <More />
-  </div>
-);
+    <div className="container">
+      <Delivery />
+      <Recommend />
+      <More />
+    </div>
+  </main>;
