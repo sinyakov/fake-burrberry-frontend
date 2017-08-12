@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Responsive from 'react-responsive';
-
-const Desctop = ({ children }) =>
-  <Responsive minWidth={992} children={children} />;
-const Mobile = ({ children }) =>
-  <Responsive maxWidth={991} children={children} />;
+import { XS, LG } from '../Responsive';
 
 const Buttons = styled.div`
   @media (min-width: 62rem) {
@@ -56,20 +51,20 @@ const Button = styled.button`
 
     @media (min-width: 62rem) {
       margin: 0;
-      background-color: inherit;      
-      border: solid 1px #171717;      
+      background-color: inherit;
+      border: solid 1px #171717;
     }
   `};
 `;
 
 export default () =>
   <Buttons>
-    <Mobile>
+    <XS>
       <Button type="button">Select a size</Button>
-    </Mobile>
-    <Desctop>
+    </XS>
+    <LG>
       <Button type="button">Add to bag</Button>
-    </Desctop>
+    </LG>
     <Button primary type="button">
       Find in store
     </Button>

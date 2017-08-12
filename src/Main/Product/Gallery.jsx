@@ -6,13 +6,11 @@ const Gallery = styled.div`margin: 4rem 0;`;
 const Img = styled.img`
   display: flex;
   width: 100%;
-
   ${props =>
     props.margin2rem &&
     `
     margin-top: 2rem;
   `};
-
   ${props =>
     props.margin6rem &&
     `

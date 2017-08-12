@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Message from './DeliveryMessage';
 
 const Delivery = styled.header`
   display: none;
@@ -28,26 +29,6 @@ const Header = styled.h2`
   text-transform: uppercase;
 `;
 
-const Message = styled.div`
-  margin: 0 0 1.5rem;
-
-  &:last-child {
-    margin: 0;
-  }
-`;
-
-const MessageHeader = styled.h3`
-  margin: 0 0 0.25rem;
-  font-size: 0.75rem;
-  line-height: 1.1666666667;
-`;
-
-const MessageText = styled.p`
-  margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.333333333;
-`;
-
 export default () =>
   <Delivery>
     <div className="row middle-lg">
@@ -60,30 +41,22 @@ export default () =>
       </div>
       <div className="col-md-5 col-lg-offset-1 col-lg-4">
         <Header>Delivery</Header>
-        <Message>
-          <MessageHeader>Free Next Day Delivery</MessageHeader>
-          <MessageText>
-            Order before 7pm Monday to Thursday for delivery the next day
-          </MessageText>
-        </Message>
-        <Message>
-          <MessageHeader>Collect-in-Store</MessageHeader>
-          <MessageText>
-            Order online today and pick up your items in store as early as
-            tomorrow
-          </MessageText>
-        </Message>
-        <Message>
-          <MessageHeader>Free Returns</MessageHeader>
-          <MessageText>Enjoy free returns on your order</MessageText>
-        </Message>
-        <Message>
-          <MessageHeader>Free Gift Packaging</MessageHeader>
-          <MessageText>
-            Discover our gift packaging, a gold lined box tied with a coloured
-            ribbon
-          </MessageText>
-        </Message>
+        <Message
+          header="Free Next Day Delivery"
+          text="Order before 7pm Monday to Thursday for delivery the next day"
+        />
+        <Message
+          header="Collect-in-Store"
+          text="Order online today and pick up your items in store as early as tomorrow"
+        />
+        <Message
+          header="Free Returns"
+          text="Enjoy free returns on your order"
+        />
+        <Message
+          header="Free Gift Packaging"
+          text="Discover our gift packaging, a gold lined box tied with a coloured ribbon"
+        />
       </div>
     </div>
   </Delivery>;

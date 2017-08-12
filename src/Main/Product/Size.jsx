@@ -62,13 +62,13 @@ const Option = styled.button`
 export default props =>
   <Size>
     <Text>
-      Size: <SizeValue>{props.activeSize}</SizeValue>
+      Size: <SizeValue>{props.sizes[props.activeSizeId]}</SizeValue>
     </Text>
     <ButtonSize />
 
     <Options>
-      {props.sizeList.map((size, id) =>
-        <Option key={id} active={size === props.activeSize} type="button">
+      {props.sizes.map((size, id) =>
+        <Option key={id} active={id === props.activeSizeId} type="button">
           {size}
         </Option>
       )}

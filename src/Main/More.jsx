@@ -20,16 +20,9 @@ const Header = styled.h2`
   text-transform: uppercase;
 `;
 
-const List = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0;
-`;
-
-const Item = styled.li`margin: 0 0 1rem;`;
-
 const Link = styled.a`
+  display: block;
+  margin: 0 0 1rem;
   font-size: 0.875rem;
   line-height: 1.2142857143;
   font-family: Lora;
@@ -42,15 +35,7 @@ export default () =>
   <More>
     <Header>More for you</Header>
 
-    <List>
-      <Item>
-        <Link href="/">Men’s Black Trench Coats</Link>
-      </Item>
-      <Item>
-        <Link href="/">Men’s Short Trench Coats</Link>
-      </Item>
-      <Item>
-        <Link href="/">Men’s Long Trench Coats</Link>
-      </Item>
-    </List>
+    <Link href="/">Men’s Black Trench Coats</Link>
+    <Link href="/">Men’s Short Trench Coats</Link>
+    <Link href="/">Men’s Long Trench Coats</Link>
   </More>;

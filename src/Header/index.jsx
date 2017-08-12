@@ -13,7 +13,6 @@ const Header = styled.header`
 `;
 
 const HeaderLogo = styled.img`
-  width: 138px;
   height: 10px;
   margin: 1rem auto;
   object-fit: contain;
@@ -23,7 +22,6 @@ const HeaderLogo = styled.img`
   }
 
   @media (min-width: 62rem) {
-    width: 221px;
     height: 16px;
     margin: 2rem auto;
   }

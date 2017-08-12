@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Responsive from 'react-responsive';
 
+import { XS, LG } from '../Responsive';
 import Slider from './Slider';
 import Info from './Info';
 import Colour from './Colour';
@@ -11,11 +11,6 @@ import Size from './Size';
 import Details from './Details';
 import Delivery from './Delivery';
 import Gallery from './Gallery';
-
-const Desctop = ({ children }) =>
-  <Responsive minWidth={992} children={children} />;
-const Mobile = ({ children }) =>
-  <Responsive maxWidth={991} children={children} />;
 
 const Card = styled.div`
   @media (min-width: 62rem) {
@@ -70,8 +65,8 @@ const Divine = styled.hr`
   }
 `;
 
-const activeColourName = 'Honey';
-const colourList = [
+const activeColourId = 1;
+const colours = [
   {
     name: 'Black',
     hex: '#232122'
@@ -82,52 +77,49 @@ const colourList = [
   }
 ];
 
-const activeSize = 'XL';
-const sizeList = ['S', 'M', 'L', 'XL'];
+const activeSizeId = 3;
+const sizes = ['S', 'M', 'L', 'XL'];
 
 export default () =>
   <div>
     <Card>
       <div className="container">
-        <Mobile>
+        <XS>
           <Title>Long Cotton Gabardine Car Coat</Title>
-        </Mobile>
+        </XS>
         <div className="row middle-lg">
           <div className="col-xs-12 col-md-7 col-lg-6">
-            <Mobile>
+            <XS>
               <Slider />
-            </Mobile>
-            <Desctop>
+            </XS>
+            <LG>
               <ImgProduct
                 src="../media/product-1.png"
                 srcSet="media/product-1@2x.png 2x, media/product-1@3x.png 3x"
                 alt="Product Image 1"
               />
-            </Desctop>
+            </LG>
           </div>
           <div className="col-xs-12 col-md-5 col-lg-6">
-            <Desctop>
+            <LG>
               <Title>
                 Long Cotton Gabardine Car Coat Long Cotton Gabardine Car Coat
               </Title>
-            </Desctop>
+            </LG>
             <Info />
             <Columns>
-              <Colour
-                colourList={colourList}
-                activeColourName={activeColourName}
-              />
-              <Desctop>
-                <Size sizeList={sizeList} activeSize={activeSize} />
-              </Desctop>
+              <Colour colours={colours} activeColourId={activeColourId} />
+              <LG>
+                <Size sizes={sizes} activeSizeId={activeSizeId} />
+              </LG>
             </Columns>
             <Buttons />
-            <Mobile>
+            <XS>
               <ButtonSize />
-            </Mobile>
-            <Desctop>
+            </XS>
+            <LG>
               <Delivery />
-            </Desctop>
+            </LG>
           </div>
         </div>
         <Divine />
@@ -138,7 +130,7 @@ export default () =>
         <div className="col-xs-12 col-lg-4">
           <Details />
         </div>
-        <Desctop>
+        <LG>
           <div className="col-lg-8">
             <ImgDetail
               src="../media/product-2.png"
@@ -146,10 +138,10 @@ export default () =>
               alt="Product Image 2"
             />
           </div>
-        </Desctop>
+        </LG>
       </div>
-      <Desctop>
+      <LG>
         <Gallery />
-      </Desctop>
+      </LG>
     </div>
   </div>;

@@ -48,14 +48,14 @@ const Option = styled.button`
 export default props =>
   <Colour>
     <Text>
-      Colour: <ColourValue>{props.activeColourName}</ColourValue>
+      Colour: <ColourValue>{props.colours[props.activeColourName]}</ColourValue>
     </Text>
     <Options>
-      {props.colourList.map((item, id) =>
+      {props.colours.map((item, id) =>
         <Option
           key={id}
           style={{ background: item.hex }}
-          active={item.name === props.activeColourName}
+          active={id === props.activeColourId}
           type="button"
         >
           {item.name}
