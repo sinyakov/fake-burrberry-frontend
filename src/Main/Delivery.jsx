@@ -34,7 +34,7 @@ export default () =>
     <div className="row middle-lg">
       <div className="col-md-7 col-lg-7">
         <Img
-          src="../media/delivery.png"
+          src="media/delivery.png"
           srcSet="media/delivery@2x.png 2x, media/delivery@3x.png 3x"
           alt="Delivery"
         />

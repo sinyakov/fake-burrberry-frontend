@@ -7,12 +7,12 @@ const Img = styled.img`
   display: flex;
   width: 100%;
   ${props =>
-    props.margin2rem &&
+    props.first &&
     `
     margin-top: 2rem;
   `};
   ${props =>
-    props.margin6rem &&
+    props.second &&
     `
     margin-top: 6rem;
   `};
@@ -23,7 +23,7 @@ export default () =>
     <div className="row">
       <div className="col-lg-4">
         <Img
-          margin2rem
+          first
           src="../media/product-2.png"
           srcSet="media/product-2@2x.png 2x, media/product-2@3x.png 3x"
           alt="Product Image 2"
@@ -31,7 +31,7 @@ export default () =>
       </div>
       <div className="col-lg-4">
         <Img
-          margin6rem
+          second
           src="../media/product-3.png"
           srcSet="media/product-3@2x.png 2x, media/product-3@3x.png 3x"
           alt="Product Image 3"

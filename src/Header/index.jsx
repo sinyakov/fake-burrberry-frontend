@@ -12,7 +12,7 @@ const Header = styled.header`
   }
 `;
 
-const HeaderLogo = styled.img`
+const Logo = styled.img`
   height: 10px;
   margin: 1rem auto;
   object-fit: contain;
@@ -30,6 +30,6 @@ const HeaderLogo = styled.img`
 export default () =>
   <Header>
     <a href="/">
-      <HeaderLogo src={logo} alt="BURBERRY" />
+      <Logo src={logo} alt="BURBERRY" />
     </a>
   </Header>;

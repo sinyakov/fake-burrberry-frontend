@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedNumber } from 'react-intl';
 import styled from 'styled-components';
 
 const Link = styled.a`
@@ -49,6 +50,12 @@ export default props =>
       {props.title}
     </Title>
     <Price>
-      {`${props.price} ${props.currency}`}
+      <FormattedNumber
+        value={props.price}
+        style="currency"
+        currency={props.currency}
+        currencyDisplay="symbol"
+        minimumFractionDigits={0}
+      />
     </Price>
   </Link>;

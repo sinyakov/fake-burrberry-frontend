@@ -26,19 +26,6 @@ const Text = styled.p`
 
 const SizeValue = styled.span`font-weight: 700;`;
 
-const Button = styled.button`
-  margin: 0 0 3rem;
-  padding: 0;
-  font-size: 0.75rem;
-  line-height: 1.3333333333;
-  font-family: Raleway;
-  color: #171717;
-  text-align: left;
-  text-transform: uppercase;
-  background-color: #ffffff;
-  border: none;
-`;
-
 const Options = styled.div`
   display: flex;
   margin: 1.0625rem 0 1rem;

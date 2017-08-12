@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedNumber } from 'react-intl';
 import styled from 'styled-components';
 
 const Info = styled.div`
@@ -40,6 +41,14 @@ const Code = styled.p`
 
 export default () =>
   <Info>
-    <Price>110 000 руб.</Price>
+    <Price>
+      <FormattedNumber
+        value={110000}
+        style="currency"
+        currency="RUB"
+        currencyDisplay="symbol"
+        minimumFractionDigits={0}
+      />
+    </Price>
     <Code>Item 39428531</Code>
   </Info>;
