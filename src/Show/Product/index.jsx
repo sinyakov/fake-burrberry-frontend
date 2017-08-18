@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { XS, LG } from '../Responsive';
+import { LGminus, LGplus } from '../../Responsive';
 import Slider from './Slider';
 import Info from './Info';
 import Colour from './Colour';
@@ -53,6 +53,7 @@ const Columns = styled.div`
   @media (min-width: 62rem) {
     display: flex;
     justify-content: space-between;
+  }
 `;
 
 const Divine = styled.hr`
@@ -84,42 +85,42 @@ export default () =>
   <div>
     <Card>
       <div className="container">
-        <XS>
+        <LGminus>
           <Title>Long Cotton Gabardine Car Coat</Title>
-        </XS>
+        </LGminus>
         <div className="row middle-lg">
           <div className="col-xs-12 col-md-7 col-lg-6">
-            <XS>
+            <LGminus>
               <Slider />
-            </XS>
-            <LG>
+            </LGminus>
+            <LGplus>
               <ImgProduct
-                src="../media/product-1.png"
-                srcSet="media/product-1@2x.png 2x, media/product-1@3x.png 3x"
+                src="/media/product-1.png"
+                srcSet="/media/product-1@2x.png 2x, media/product-1@3x.png 3x"
                 alt="Product Image 1"
               />
-            </LG>
+            </LGplus>
           </div>
           <div className="col-xs-12 col-md-5 col-lg-6">
-            <LG>
+            <LGplus>
               <Title>
                 Long Cotton Gabardine Car Coat Long Cotton Gabardine Car Coat
               </Title>
-            </LG>
+            </LGplus>
             <Info />
             <Columns>
               <Colour colours={colours} activeColourIndex={activeColourIndex} />
-              <LG>
+              <LGplus>
                 <Size sizes={sizes} activeSizeIndex={activeSizeIndex} />
-              </LG>
+              </LGplus>
             </Columns>
             <Buttons />
-            <XS>
+            <LGminus>
               <HelpButton />
-            </XS>
-            <LG>
+            </LGminus>
+            <LGplus>
               <Delivery />
-            </LG>
+            </LGplus>
           </div>
         </div>
         <Divine />
@@ -130,18 +131,18 @@ export default () =>
         <div className="col-xs-12 col-lg-4">
           <Details />
         </div>
-        <LG>
+        <LGplus>
           <div className="col-lg-8">
             <ImgDetail
-              src="../media/product-2.png"
-              srcSet="media/product-2@2x.png 2x, media/product-2@3x.png 3x"
+              src="/media/product-2.png"
+              srcSet="/media/product-2@2x.png 2x, /media/product-2@3x.png 3x"
               alt="Product Image 2"
             />
           </div>
-        </LG>
+        </LGplus>
       </div>
-      <LG>
+      <LGplus>
         <Gallery />
-      </LG>
+      </LGplus>
     </div>
   </div>;

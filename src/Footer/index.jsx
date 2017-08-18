@@ -34,6 +34,11 @@ const ButtonCountry = styled(Button)`
     margin-bottom: 0;
     margin-left: 0;
   }
+
+  @media (min-width: 62rem) {
+    margin-top: 1rem;
+    margin-right: 3rem;
+  }
 `;
 
 const ButtonLanguage = styled(Button)`
@@ -41,6 +46,10 @@ const ButtonLanguage = styled(Button)`
   
   @media (min-width: 48rem) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 62rem) {
+    margin-top: 1rem;
   }
 `;
 

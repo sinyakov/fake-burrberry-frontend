@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { XS, LG } from '../Responsive';
+import { LGminus, LGplus } from '../../Responsive';
 
 const Buttons = styled.div`
   @media (min-width: 62rem) {
@@ -59,12 +59,12 @@ const Button = styled.button`
 
 export default () =>
   <Buttons>
-    <XS>
+    <LGminus>
       <Button type="button">Select a size</Button>
-    </XS>
-    <LG>
+    </LGminus>
+    <LGplus>
       <Button type="button">Add to bag</Button>
-    </LG>
+    </LGplus>
     <Button primary type="button">
       Find in store
     </Button>

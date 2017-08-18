@@ -7,7 +7,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
-    families: ['Lora:400,400i', 'Raleway:400,700']
+    families: ['Lora:400,400i,500', 'Raleway:400,600,700']
   }
 });
 

@@ -1,35 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../img/logo.svg';
+import { MDminus, MDplus } from '../Responsive';
 
-const Header = styled.header`
-  font-size: 0;
-  text-align: center;
-  border-bottom: solid 1px #c6c6c6;
+import Country from './Country';
+import Menu from './Menu';
 
-  @media (min-width: 62rem) {
-    border-bottom: none;
-  }
-`;
+const Wrapper = styled.div`position: relative;`;
+
+const Header = styled.header`text-align: center;`;
 
 const Logo = styled.img`
-  height: 10px;
-  margin: 1rem auto;
+  display: flex;
+  height: 12px;
+  margin: 1.125rem auto;
   object-fit: contain;
 
   @media (min-width: 48rem) {
+    height: 16px;
     margin: 1.5rem auto;
   }
 
   @media (min-width: 62rem) {
-    height: 16px;
     margin: 2rem auto;
   }
 `;
 
 export default () =>
-  <Header>
-    <a href="/">
-      <Logo src={logo} alt="BURBERRY" />
-    </a>
-  </Header>;
+  <div className="container">
+    <Wrapper>
+      <Header>
+        <MDminus>
+          <Menu />
+        </MDminus>
+        <MDplus>
+          <Country />
+        </MDplus>
+        <a href="/">
+          <Logo src={logo} alt="BURBERRY" />
+        </a>
+      </Header>
+    </Wrapper>
+  </div>;
