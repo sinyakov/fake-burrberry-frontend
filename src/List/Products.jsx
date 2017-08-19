@@ -86,8 +86,7 @@ const Products = props =>
 
 Products.propTypes = {
   header: PropTypes.string.isRequired,
-  list: PropTypes.array.isRequired, // eslint-disable-line
-  // передаю массив, пока нет API
+  list: PropTypes.arrayOf(PropTypes.obj).isRequired,
 };
 
 export default Products;
