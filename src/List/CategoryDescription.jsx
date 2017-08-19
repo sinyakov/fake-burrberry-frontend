@@ -15,10 +15,10 @@ const Description = styled.div`
 
 const Header = styled.h1`
   margin: 0 0 1rem;
-  font-size: 1.5em;
-  line-height: 1.35;
+  font-size: 1.625em;
+  line-height: 1.23;
   font-family: Lora;
-  font-weigh: 500;
+  font-weight: 500;
 `;
 
 const Text = styled.p`

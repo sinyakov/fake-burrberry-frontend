@@ -70,7 +70,7 @@ const Colour = props =>
 
 Colour.propTypes = {
   activeColourIndex: PropTypes.number.isRequired,
-  colours: PropTypes.arrayOf(PropTypes.string).isRequired,
+  colours: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Colour;

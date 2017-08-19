@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link as RouteLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
+import like from '../img/like.svg';
 
 const Card = styled.div`
   margin: 0 0 2rem;
@@ -20,8 +21,26 @@ const Img = styled.img`
   margin: 0 0 1rem;
 `;
 
-const Label = styled.h4`
+const LikeWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin: 0 0 0.5rem;
+`;
+
+const Like = styled.button`
+  content: '';
+  width: 0.875rem;
+  height: auto;
+  padding: 0 0;
+  border: none;
+  background-color: inherit;
+  background-image: url(${like});
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+const Label = styled.h4`
+  margin: 0;
   font-size: 0.75rem;
   line-height: 1.33;
   font-weight: 400;
@@ -68,10 +87,12 @@ const ProductCard = props =>
     <Link to={`/men/clothing/${props.id}`}>
       <Img src={`/media/list/${props.id}.jpg`} />
     </Link>
-
-    <Label>
-      {props.label}
-    </Label>
+    <LikeWrapper>
+      <Label>
+        {props.label}
+      </Label>
+      <Like type="button" />
+    </LikeWrapper>
     <Link to={`/men/clothing/${props.id}`}>
       <Header>
         {props.title}
