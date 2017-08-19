@@ -118,7 +118,7 @@ export default () =>
     <Divine />
     <Detail shipping>
       <Button type="button">
-        <Header>Shipping & Returns</Header>
+        <Header>Delivery</Header>
       </Button>
     </Detail>
     <Divine />

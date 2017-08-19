@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import ProductCard from './ProductCard';
+import ProductCard from '../common/ProductCard';
 
 const Wrapper = styled.div`
   margin: 2rem 0 1rem;
@@ -26,7 +26,7 @@ const Header = styled.h2`
 `;
 
 const ShowingInfo = styled.h3`
-  margin: 2rem 0 1rem;
+  margin: 3rem 0 1rem;
   font-family: Lora;
   font-size: 1rem;
   line-height: 1.15;

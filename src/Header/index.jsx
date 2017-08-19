@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../img/logo.svg';
-import { MDminus, MDplus } from '../Responsive';
+import { XSonly, MDminus, MDplus } from '../Responsive';
+import CategoryMenu from './CategoryMenu';
 
 import Country from './Country';
 import Menu from './Menu';
@@ -40,5 +41,8 @@ export default () =>
           <Logo src={logo} alt="BURBERRY" />
         </a>
       </Header>
+      <XSonly>
+        <CategoryMenu />
+      </XSonly>
     </Wrapper>
   </div>);

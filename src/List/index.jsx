@@ -1,19 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { XSonly } from '../Responsive';
 
-import CategoryMenu from './CategoryMenu';
 import CategoryDescription from './CategoryDescription';
 import Filter from './Filter';
 import Products from './Products';
 
 const Divine = styled.hr`
-  margin: 3rem 0 3rem;
+  margin: 1rem 0 3rem;
   border: none;
   border-bottom: 1px solid #c6c6c6;
 
   @media (min-width: 48rem) {
-    margin: 2rem 0 -1rem;
+    margin: 2rem 0 0;
   }
 
   @media (min-width: 62rem) {
@@ -106,9 +104,6 @@ const products = [
 
 export default () =>
   (<main>
-    <XSonly>
-      <CategoryMenu />
-    </XSonly>
     <CategoryDescription />
     <Filter />
     <div className="container">

@@ -27,6 +27,8 @@ const Button = styled.button`
   border: 0;
 `;
 
+const ButtonOption = styled.span`color: #171717;`;
+
 const ButtonCountry = styled(Button)`
   margin: 0 1.5rem 1rem 0;
   
@@ -82,8 +84,12 @@ export default () =>
   (<Footer>
     <div className="container">
       <Menu />
-      <ButtonCountry type="button">Shipping country: Russian Federation</ButtonCountry>
-      <ButtonLanguage type="button">Language: English</ButtonLanguage>
+      <ButtonCountry type="button">
+        Shipping country: <ButtonOption>Russian Federation</ButtonOption>
+      </ButtonCountry>
+      <ButtonLanguage type="button">
+        Language: <ButtonOption>English</ButtonOption>
+      </ButtonLanguage>
       <Contact href="#">
         <Header>Need help?</Header>
         <Text>Find out more and contact us</Text>

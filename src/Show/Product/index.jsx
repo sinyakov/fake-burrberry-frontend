@@ -20,7 +20,7 @@ const Card = styled.div`
 `;
 
 const Title = styled.h1`
-  margin: 1rem 0;
+  margin: 2.125rem 0 1rem;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.2;

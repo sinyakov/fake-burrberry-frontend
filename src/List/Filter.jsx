@@ -13,6 +13,12 @@ const Menu = styled.div`
 const DropdownBlock = styled.div`
   display: flex;
   margin: 0 -0.5rem;
+
+  ${props =>
+    props.right &&
+    `
+    margin-left: 1rem;
+  `};
 `;
 
 const Dropdown = styled.button`
@@ -60,7 +66,7 @@ export default () =>
           <Dropdown>Colour</Dropdown>
           <Dropdown>Size</Dropdown>
         </DropdownBlock>
-        <DropdownBlock>
+        <DropdownBlock right>
           <Dropdown>Sort by price</Dropdown>
         </DropdownBlock>
       </Menu>

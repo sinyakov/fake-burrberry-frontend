@@ -21,9 +21,13 @@ const Header = styled.h1`
 `;
 
 const Text = styled.p`
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-size: 0.75rem;
   line-height: 1.67;
+
+  @media (min-width: 48rem) {
+    margin: 0 0 0.5rem;
+  }
 `;
 
 const Link = styled.a`color: #171717;`;
