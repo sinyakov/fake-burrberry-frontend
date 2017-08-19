@@ -25,10 +25,10 @@ const Category = styled.div`
 `;
 
 export default () =>
-  <Menu>
+  (<Menu>
     <Category>Women</Category>
     <Category active>Men</Category>
     <Category>Children</Category>
     <Category>Beauty</Category>
     <Category>Experience</Category>
-  </Menu>;
+  </Menu>);

@@ -52,7 +52,7 @@ const Dropdown = styled.button`
 `;
 
 export default () =>
-  <Wrapper>
+  (<Wrapper>
     <div className="container">
       <Menu>
         <DropdownBlock>
@@ -65,4 +65,4 @@ export default () =>
         </DropdownBlock>
       </Menu>
     </div>
-  </Wrapper>;
+  </Wrapper>);

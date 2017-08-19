@@ -58,7 +58,7 @@ const Button = styled.button`
 `;
 
 export default () =>
-  <Buttons>
+  (<Buttons>
     <LGminus>
       <Button type="button">Select a size</Button>
     </LGminus>
@@ -68,4 +68,4 @@ export default () =>
     <Button primary type="button">
       Find in store
     </Button>
-  </Buttons>;
+  </Buttons>);

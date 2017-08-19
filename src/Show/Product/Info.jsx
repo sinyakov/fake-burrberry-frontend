@@ -40,15 +40,15 @@ const Code = styled.p`
 `;
 
 export default () =>
-  <Info>
+  (<Info>
     <Price>
       <FormattedNumber
         value={110000}
-        style="currency"
+        style="currency" // eslint-disable-line
         currency="RUB"
         currencyDisplay="symbol"
         minimumFractionDigits={0}
       />
     </Price>
     <Code>Item 39428531</Code>
-  </Info>;
+  </Info>);

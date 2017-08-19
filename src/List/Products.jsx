@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ProductCard from './ProductCard';
 
-const Products = styled.div`
+const Wrapper = styled.div`
   margin: 2rem 0;
 
   @media (min-width: 48rem) {
@@ -57,15 +58,15 @@ const Button = styled.button`
 
 const Gallery = styled.div``;
 
-export default props =>
-  <Products>
+const Products = props =>
+  (<Wrapper>
     <Header>
       {props.header}
     </Header>
     <Gallery>
       <div className="row">
-        {props.list.map((card, index) =>
-          <div className="col-xs-6 col-md-3" key={index}>
+        {props.list.map(card =>
+          (<div className="col-xs-6 col-md-3" key={card.id}>
             <ProductCard
               id={card.id}
               label={card.label}
@@ -73,7 +74,7 @@ export default props =>
               avaliableColours={card.avaliableColours}
               price={card.price}
             />
-          </div>
+          </div>),
         )}
       </div>
     </Gallery>
@@ -82,4 +83,12 @@ export default props =>
         <ShowingInfo>Showing 8 of 17</ShowingInfo>
         <Button>View 9 more</Button>
       </div>}
-  </Products>;
+  </Wrapper>);
+
+Products.propTypes = {
+  header: PropTypes.string.isRequired,
+  list: PropTypes.array.isRequired, // eslint-disable-line
+  // передаю массив, пока нет API
+};
+
+export default Products;

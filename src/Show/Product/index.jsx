@@ -70,19 +70,19 @@ const activeColourIndex = 1;
 const colours = [
   {
     name: 'Black',
-    hex: '#232122'
+    hex: '#232122',
   },
   {
     name: 'Honey',
-    hex: '#cfa880'
-  }
+    hex: '#cfa880',
+  },
 ];
 
 const activeSizeIndex = 3;
 const sizes = ['S', 'M', 'L', 'XL'];
 
 export default () =>
-  <div>
+  (<div>
     <Card>
       <div className="container">
         <LGminus>
@@ -103,9 +103,7 @@ export default () =>
           </div>
           <div className="col-xs-12 col-md-5 col-lg-6">
             <LGplus>
-              <Title>
-                Long Cotton Gabardine Car Coat Long Cotton Gabardine Car Coat
-              </Title>
+              <Title>Long Cotton Gabardine Car Coat Long Cotton Gabardine Car Coat</Title>
             </LGplus>
             <Info />
             <Columns>
@@ -145,4 +143,4 @@ export default () =>
         <Gallery />
       </LGplus>
     </div>
-  </div>;
+  </div>);

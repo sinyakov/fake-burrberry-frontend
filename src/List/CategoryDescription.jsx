@@ -25,16 +25,15 @@ const Text = styled.p`
 `;
 
 export default () =>
-  <Wrapper>
+  (<Wrapper>
     <div className="container">
       <Description>
         <Header>Men’s Clothing</Header>
         <Text>
           Explore our menswear collection for the season. Sculptural knitwear,{' '}
-          <a href="/">sweatshirts</a>, artist overalls and oversized cabans
-          feature alongside our signature trench coat in both heritage and
-          seasonal... <a href="/">More</a>
+          <a href="/">sweatshirts</a>, artist overalls and oversized cabans feature alongside our
+          signature trench coat in both heritage and seasonal... <a href="/">More</a>
         </Text>
       </Description>
     </div>
-  </Wrapper>;
+  </Wrapper>);

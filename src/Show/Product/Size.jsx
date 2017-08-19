@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import HelpButton from './HelpButton';
 
-const Size = styled.div`
+const Wrapper = styled.div`
   position: relative;
   width: 100%;
   margin: 0;
@@ -46,8 +47,8 @@ const Option = styled.button`
   }
 `;
 
-export default props =>
-  <Size>
+const Size = props =>
+  (<Wrapper>
     <Text>
       <span>Size: </span>
       <SizeValue>
@@ -58,13 +59,16 @@ export default props =>
 
     <Options>
       {props.sizes.map((size, index) =>
-        <Option
-          key={index}
-          active={index === props.activeSizeIndex}
-          type="button"
-        >
+        (<Option key={size} active={index === props.activeSizeIndex} type="button">
           {size}
-        </Option>
+        </Option>),
       )}
     </Options>
-  </Size>;
+  </Wrapper>);
+
+Size.propTypes = {
+  activeSizeIndex: PropTypes.number.isRequired,
+  sizes: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+export default Size;

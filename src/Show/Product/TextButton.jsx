@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TextButton = styled.button`
+const TextButton = styled.button`
   margin: 0 0 3rem;
   padding: 0;
   font-size: 0.75rem;
@@ -20,3 +20,5 @@ export const TextButton = styled.button`
     background-color: inherit;
   }
 `;
+
+export default TextButton;

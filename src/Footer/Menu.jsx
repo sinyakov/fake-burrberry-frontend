@@ -37,7 +37,7 @@ const Link = styled.a`
 `;
 
 export default () =>
-  <Menu>
+  (<Menu>
     <div className="row">
       <div className="col-md-3">
         <Header>Customer service</Header>
@@ -73,4 +73,4 @@ export default () =>
         </Nav>
       </div>
     </div>
-  </Menu>;
+  </Menu>);

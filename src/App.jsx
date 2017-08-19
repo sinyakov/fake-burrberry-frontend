@@ -1,6 +1,6 @@
 import React from 'react';
 import 'normalize.css';
-import 'flexboxgrid2';
+import 'flexboxgrid2/flexboxgrid2.css';
 import Helmet from 'react-helmet';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -15,7 +15,7 @@ import Footer from './Footer';
 addLocaleData(ruLocaleData);
 
 export default () =>
-  <IntlProvider locale="ru">
+  (<IntlProvider locale="ru">
     <Router>
       <div>
         <Helmet>
@@ -27,4 +27,4 @@ export default () =>
         <Footer />
       </div>
     </Router>
-  </IntlProvider>;
+  </IntlProvider>);

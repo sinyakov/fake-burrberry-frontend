@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FormattedNumber } from 'react-intl';
 import styled from 'styled-components';
 
@@ -43,8 +44,8 @@ const Price = styled.h5`
   }
 `;
 
-export default props =>
-  <Link>
+const RecommendedProduct = props =>
+  (<Link>
     <Img src={props.image} alt={props.title} />
     <Title>
       {props.title}
@@ -52,10 +53,19 @@ export default props =>
     <Price>
       <FormattedNumber
         value={props.price}
-        style="currency"
+        style="currency" // eslint-disable-line
         currency={props.currency}
         currencyDisplay="symbol"
         minimumFractionDigits={0}
       />
     </Price>
-  </Link>;
+  </Link>);
+
+RecommendedProduct.propTypes = {
+  price: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+export default RecommendedProduct;

@@ -27,7 +27,7 @@ const Logo = styled.img`
 `;
 
 export default () =>
-  <div className="container">
+  (<div className="container">
     <Wrapper>
       <Header>
         <MDminus>
@@ -41,4 +41,4 @@ export default () =>
         </a>
       </Header>
     </Wrapper>
-  </div>;
+  </div>);

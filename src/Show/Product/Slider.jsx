@@ -21,7 +21,7 @@ const Slide = styled.img`
 `;
 
 export default () =>
-  <Slider>
+  (<Slider>
     <Slide
       src="/media/product-1.png"
       srcSet="/media/product-1@2x.png 2x, /media/product-1@3x.png 3x"
@@ -42,4 +42,4 @@ export default () =>
       srcSet="/media/product-4@2x.png 2x, /media/product-4@3x.png 3x"
       alt="Product Image 4"
     />
-  </Slider>;
+  </Slider>);

@@ -26,59 +26,58 @@ const products = [
         label: 'Relaxed fit',
         title: 'The Westminster – Long Heritage Trench Coat',
         avaliableColours: 3,
-        price: 1700
+        price: 1700,
       },
-
       {
         id: 2,
         label: 'Classic fit',
         title: 'The Kensington – Mid-Length Heritage Trench Coat',
         avaliableColours: 2,
-        price: 1700
+        price: 1700,
       },
       {
         id: 3,
         label: 'Toilered fit',
         title: 'The Sandringham – Mid-length Heritage Trench Coat',
         avaliableColours: 4,
-        price: 1700
+        price: 1700,
       },
       {
         id: 4,
         label: 'Relaxed fit',
         title: 'The Chelsea – Short Heritage Trench Coat',
         avaliableColours: 1,
-        price: 1700
+        price: 1700,
       },
       {
         id: 5,
         label: 'Relaxed fit',
         title: 'The Westminster – Long Heritage Trench Coat',
         avaliableColours: 4,
-        price: 1700
+        price: 1700,
       },
       {
         id: 6,
         label: 'Classic fit',
         title: 'The Kensington – Long Heritage Trench Coat',
         avaliableColours: 1,
-        price: 1700
+        price: 1700,
       },
       {
         id: 7,
         label: 'Toilored fit',
         title: 'The Sandringham Short Heritage Trench Coat',
         avaliableColours: 3,
-        price: 1700
+        price: 1700,
       },
       {
         id: 8,
         label: 'Slim fit',
         title: 'The Chelsea – Long Heritage Trench Coat',
         avaliableColours: 1,
-        price: 1700
-      }
-    ]
+        price: 1700,
+      },
+    ],
   },
   {
     header: 'Single Breasted Trench Coats',
@@ -88,21 +87,21 @@ const products = [
         label: 'Relaxed fit',
         title: 'The Westminster – Long Heritage Trench Coat',
         avaliableColours: 3,
-        price: 1700
+        price: 1700,
       },
       {
         id: 10,
         label: 'Online Exclusive',
         title: 'The Brighton – Longline Car Coat',
         avaliableColours: 2,
-        price: 1700
-      }
-    ]
-  }
+        price: 1700,
+      },
+    ],
+  },
 ];
 
 export default () =>
-  <main>
+  (<main>
     <XSonly>
       <CategoryMenu />
     </XSonly>
@@ -113,4 +112,4 @@ export default () =>
       <Divine />
       <Products header={products[1].header} list={products[1].list} />
     </div>
-  </main>;
+  </main>);

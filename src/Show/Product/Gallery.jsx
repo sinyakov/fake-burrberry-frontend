@@ -20,7 +20,7 @@ const Img = styled.img`
 `;
 
 export default () =>
-  <Gallery className="row">
+  (<Gallery className="row">
     <div className="col-lg-4">
       <Img
         src="/media/product-2.png"
@@ -42,4 +42,4 @@ export default () =>
         alt="Product Image 4"
       />
     </div>
-  </Gallery>;
+  </Gallery>);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
 
@@ -50,8 +50,8 @@ const Avaliable = styled.p`margin: 0 0 0.25rem;`;
 
 const Price = styled.p`margin: 0;`;
 
-export default props =>
-  <Card>
+const ProductCard = props =>
+  (<Card>
     <a>
       <Img src={`media/list/${props.id}.jpg`} />
     </a>
@@ -70,10 +70,20 @@ export default props =>
     <Price>
       <FormattedNumber
         value={props.price}
-        style="currency"
+        style="currency" // eslint-disable-line
         currency="RUB"
         currencyDisplay="symbol"
         minimumFractionDigits={0}
       />
     </Price>
-  </Card>;
+  </Card>);
+
+ProductCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  label: PropTypes.string.isRequired,
+  title: PropTypes.number.isRequired,
+  avaliableColours: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
+};
+
+export default ProductCard;

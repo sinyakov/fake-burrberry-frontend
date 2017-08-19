@@ -79,19 +79,14 @@ const Text = styled.p`
 `;
 
 export default () =>
-  <Footer>
+  (<Footer>
     <div className="container">
       <Menu />
-
-      <ButtonCountry type="button">
-        Shipping country: Russian Federation
-      </ButtonCountry>
-
+      <ButtonCountry type="button">Shipping country: Russian Federation</ButtonCountry>
       <ButtonLanguage type="button">Language: English</ButtonLanguage>
-
       <Contact href="#">
         <Header>Need help?</Header>
         <Text>Find out more and contact us</Text>
       </Contact>
     </div>
-  </Footer>;
+  </Footer>);

@@ -30,7 +30,7 @@ const Header = styled.h2`
 `;
 
 export default () =>
-  <Delivery>
+  (<Delivery>
     <div className="row middle-lg">
       <div className="col-md-7 col-lg-7">
         <Img
@@ -49,14 +49,11 @@ export default () =>
           header="Collect-in-Store"
           text="Order online today and pick up your items in store as early as tomorrow"
         />
-        <Message
-          header="Free Returns"
-          text="Enjoy free returns on your order"
-        />
+        <Message header="Free Returns" text="Enjoy free returns on your order" />
         <Message
           header="Free Gift Packaging"
           text="Discover our gift packaging, a gold lined box tied with a coloured ribbon"
         />
       </div>
     </div>
-  </Delivery>;
+  </Delivery>);
