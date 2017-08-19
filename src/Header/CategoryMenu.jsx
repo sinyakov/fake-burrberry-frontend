@@ -26,9 +26,9 @@ const Link = styled(NavLink)`
 
 export default () =>
   (<Menu>
-    <Link to={`${process.env.PUBLIC_URL}/women`}>Women</Link>
-    <Link to={`${process.env.PUBLIC_URL}/men`}>Men</Link>
-    <Link to={`${process.env.PUBLIC_URL}/children`}>Children</Link>
-    <Link to={`${process.env.PUBLIC_URL}/beauty`}>Beauty</Link>
-    <Link to={`${process.env.PUBLIC_URL}/experience`}>Experience</Link>
+    <Link to={'/women'}>Women</Link>
+    <Link to={'/men'}>Men</Link>
+    <Link to={'/children'}>Children</Link>
+    <Link to={'/beauty'}>Beauty</Link>
+    <Link to={'/experience'}>Experience</Link>
   </Menu>);

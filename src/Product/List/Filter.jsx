@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import arrow from '../img/arrow.svg';
+import arrow from '../../img/arrow.svg';
 
 const Wrapper = styled.div`background-color: #f3f3f3;`;
 

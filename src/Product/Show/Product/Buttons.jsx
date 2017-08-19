@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LGminus, LGplus } from '../../Responsive';
+import { LGminus, LGplus } from '../../../Responsive';
 
 const Buttons = styled.div`
   @media (min-width: 62rem) {
@@ -43,7 +43,7 @@ const Button = styled.button`
     margin: 0 0 1.375rem;
     color: #171717;
     background-color: #ffffff;
-    border: solid 1px #999999;
+    border: solid 1px #171717;
 
     @media (min-width: 48rem) {
       margin: 1rem 0 1.375rem;

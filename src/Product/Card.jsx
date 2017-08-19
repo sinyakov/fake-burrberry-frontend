@@ -79,12 +79,13 @@ const Link = styled(RouteLink)`
 `;
 
 const LinkUnderlined = styled(Link)`
-  text-decoration: underline;
+  border-bottom: 1px solid #171717;
+  text-decoration: none;
 `;
 
 const ProductCard = props =>
   (<Card>
-    <Link to={`/men/clothing/${props.id}`}>
+    <Link to={props.to}>
       <Img src={props.image} />
     </Link>
     <LikeWrapper>
@@ -93,14 +94,14 @@ const ProductCard = props =>
       </Label>
       <Like type="button" />
     </LikeWrapper>
-    <Link to={`/men/clothing/${props.id}`}>
+    <Link to={props.to}>
       <Header>
         {props.title}
       </Header>
     </Link>
     <Avaliable>
       <span>Available in </span>
-      <LinkUnderlined to={`${process.env.PUBLIC_URL}/men/clothing/${props.id}`}>
+      <LinkUnderlined to={props.to}>
         {props.avaliableColours} colours
       </LinkUnderlined>
     </Avaliable>
@@ -116,7 +117,7 @@ const ProductCard = props =>
   </Card>);
 
 ProductCard.propTypes = {
-  id: PropTypes.number.isRequired,
+  to: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

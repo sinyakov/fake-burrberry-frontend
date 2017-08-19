@@ -8,8 +8,8 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import ruLocaleData from 'react-intl/locale-data/ru';
 
 import Header from './Header';
-import List from './List';
-import Show from './Show';
+import Products from './Product/List';
+import Product from './Product/Show';
 import Footer from './Footer';
 
 addLocaleData(ruLocaleData);
@@ -23,9 +23,9 @@ export default () =>
         </Helmet>
         <Header />
         <Switch>
-          <Route exact path="/:section/" component={List} />
-          <Route exact path="/:section/:category" component={List} />
-          <Route path="/:section/:category/:id" component={Show} />
+          <Route exact path="/:section/" component={Products} />
+          <Route exact path="/:section/:category" component={Products} />
+          <Route path="/:section/:category/:id" component={Product} />
           <Redirect from="/" to="/men/clothing" />
         </Switch>
         <Footer />

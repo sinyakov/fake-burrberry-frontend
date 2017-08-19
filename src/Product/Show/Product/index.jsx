@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { LGminus, LGplus } from '../../Responsive';
+import { LGminus, LGplus } from '../../../Responsive';
 import Slider from './Slider';
 import Info from './Info';
 import Colour from './Colour';

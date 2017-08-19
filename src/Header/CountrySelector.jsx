@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import arrow from '../img/arrow.svg';
 
-const Country = styled.button`
+const CountrySelector = styled.button`
   position: absolute;
   top: 0;
   left: 0;
@@ -28,4 +28,4 @@ const Country = styled.button`
   }
 `;
 
-export default () => <Country>Shopping in: Russia (RUB)</Country>;
+export default () => <CountrySelector>Shopping in: Russia (RUB)</CountrySelector>;

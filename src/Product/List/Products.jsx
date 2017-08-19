@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import ProductCard from '../common/ProductCard';
+import ProductCard from '../Card';
 
 const Wrapper = styled.div`
   margin: 2rem 0 1rem;
@@ -51,7 +51,7 @@ const Button = styled.button`
   text-align: center;
   color: #171717;
   background-color: #ffffff;
-  border: solid 1px #999999;
+  border: solid 1px #171717;
   border-radius: 2px;
 `;
 
@@ -67,7 +67,7 @@ const Products = props =>
         {props.list.map(card =>
           (<div className="col-xs-6 col-md-3" key={card.id}>
             <ProductCard
-              id={card.id}
+              to={card.to}
               image={card.image}
               label={card.label}
               title={card.title}

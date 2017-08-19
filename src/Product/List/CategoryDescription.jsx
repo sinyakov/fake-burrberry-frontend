@@ -16,7 +16,7 @@ const Description = styled.div`
 const Header = styled.h1`
   margin: 0 0 1rem;
   font-size: 1.625em;
-  line-height: 1.23;
+  line-height: 1.25;
   font-family: Lora;
   font-weight: 500;
 `;
@@ -37,7 +37,7 @@ const Link = styled(RouteLink)`
 `;
 
 const LinkUnderlined = styled(Link)`
-  text-decoration: underline;
+  border-bottom: 1px solid #171717;
 `;
 
 export default () =>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import triangle from '../../img/triangle.svg';
+import triangle from '../../../img/triangle.svg';
 
 const Detail = styled.div`
   padding: 2rem 0;

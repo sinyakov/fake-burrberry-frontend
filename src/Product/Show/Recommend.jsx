@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProductCard from '../common/ProductCard';
+import ProductCard from '../Card';
 
 const Recommend = styled.section`
   padding: 3rem 0 0;
@@ -27,6 +27,7 @@ const Heading = styled.h2`
 const recommendations = [
   {
     id: 1,
+    to: '/men/clothing/1',
     image:
       'https://assets.burberry.com/is/image/Burberryltd/995466e7e1113f3b2f6484ceb090072e1c9062dc.jpg?$BBY_V2_ML_3X4$&wid=303',
     label: 'Relaxed fit',
@@ -36,6 +37,7 @@ const recommendations = [
   },
   {
     id: 2,
+    to: '/men/clothing/2',
     image:
       'https://assets.burberry.com/is/image/Burberryltd/90dd344122ccf1884fce63c4fc775bd6baa7a11f.jpg?$BBY_V2_ML_3X4$&wid=303',
     label: 'Classic fit',
@@ -45,6 +47,7 @@ const recommendations = [
   },
   {
     id: 3,
+    to: '/men/clothing/3',
     image:
       'https://assets.burberry.com/is/image/Burberryltd/fb6adea94455f2a73e97b5cf2d7811d9135dcbe2.jpg?$BBY_V2_ML_3X4$&wid=303',
     label: 'Toilered fit',
@@ -54,6 +57,7 @@ const recommendations = [
   },
   {
     id: 4,
+    to: '/men/clothing/4',
     image:
       'https://assets.burberry.com/is/image/Burberryltd/a2fa084eae958434c326685fc8ff19dfce9fe430.jpg?$BBY_V2_ML_3X4$&wid=303',
     label: 'Relaxed fit',
@@ -71,7 +75,7 @@ export default () =>
       {recommendations.map(card =>
         (<div className="col-xs-6 col-md-3" key={card.id}>
           <ProductCard
-            id={card.id}
+            to={card.to}
             label={card.label}
             image={card.image}
             title={card.title}

@@ -8,10 +8,12 @@ const Img = styled.img`
 `;
 
 const Link = styled(NavLink)`
+  border-bottom: 1px solid #171717;
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.33;
   color: #171717;
+  text-decoration: none;
 `;
 
 export default () =>

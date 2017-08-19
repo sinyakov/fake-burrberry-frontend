@@ -5,7 +5,7 @@ import logo from '../img/logo.svg';
 import { XSonly, MDminus, MDplus } from '../Responsive';
 import CategoryMenu from './CategoryMenu';
 
-import Country from './Country';
+import CountrySelector from './CountrySelector';
 import Menu from './Menu';
 
 const Wrapper = styled.div`position: relative;`;
@@ -41,7 +41,7 @@ export default () =>
           <Menu />
         </MDminus>
         <MDplus>
-          <Country />
+          <CountrySelector />
         </MDplus>
         <Link to="/">
           <Logo src={logo} alt="BURBERRY" />
