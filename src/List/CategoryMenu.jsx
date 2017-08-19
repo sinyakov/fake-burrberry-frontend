@@ -7,13 +7,14 @@ const Menu = styled.div`
   text-transform: uppercase;
 `;
 
-const Category = styled.div`
+const Category = styled.a`
   padding: 1rem;
   font-family: Raleway;
   font-size: 0.75rem;
   line-height: 1.35;
   letter-spacing: 1.5px;
   color: #999999;
+  text-decoration: none;
 
   ${props =>
     props.active &&
@@ -26,9 +27,9 @@ const Category = styled.div`
 
 export default () =>
   (<Menu>
-    <Category>Women</Category>
+    <Category href="/">Women</Category>
     <Category active>Men</Category>
-    <Category>Children</Category>
-    <Category>Beauty</Category>
-    <Category>Experience</Category>
+    <Category href="/">Children</Category>
+    <Category href="/">Beauty</Category>
+    <Category href="/">Experience</Category>
   </Menu>);

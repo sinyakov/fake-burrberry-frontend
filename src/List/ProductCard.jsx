@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { FormattedNumber } from 'react-intl';
 
 const Card = styled.div`
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
   font-size: 0.75rem;
   line-height: 1.1;
 
@@ -32,7 +32,7 @@ const Label = styled.h4`
 const Header = styled.h3`
   margin: 0 0 0.5rem;
   font-size: 0.75rem;
-  line-height: 1.33;
+  line-height: 1.4;
   font-weight: 600;
 
   @media (min-width: 48rem) {
@@ -46,9 +46,17 @@ const Header = styled.h3`
   }
 `;
 
-const Avaliable = styled.p`margin: 0 0 0.25rem;`;
+const Avaliable = styled.p`
+  margin: 0 0 0.25rem;
+  line-height: 1.55;
+`;
 
-const Price = styled.p`margin: 0;`;
+const Price = styled.p`
+  margin: 0;
+  line-height: 1.35;
+`;
+
+const Link = styled.a`color: #171717;`;
 
 const ProductCard = props =>
   (<Card>
@@ -65,7 +73,7 @@ const ProductCard = props =>
       </Header>
     </a>
     <Avaliable>
-      Available in <a href="/">{props.avaliableColours} colours</a>
+      Available in <Link href="/">{props.avaliableColours} colours</Link>
     </Avaliable>
     <Price>
       <FormattedNumber

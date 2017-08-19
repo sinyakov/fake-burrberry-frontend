@@ -13,7 +13,11 @@ const Divine = styled.hr`
   border-bottom: 1px solid #c6c6c6;
 
   @media (min-width: 48rem) {
-    margin: 2rem 0 2rem;
+    margin: 2rem 0 -1rem;
+  }
+
+  @media (min-width: 62rem) {
+    margin: 2rem 0 0rem;
   }
 `;
 

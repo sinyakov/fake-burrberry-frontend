@@ -43,7 +43,7 @@ const Dropdown = styled.button`
   }
 
   @media (min-width: 48rem) {
-    margin-right: 3.5rem;
+    margin-right: 2.5rem;
   }
 
   @media (min-width: 62rem) {

@@ -38,8 +38,6 @@ const Link = styled.a`
   }
 `;
 
-const Img = styled.img`max-width: 100%;`;
-
 export default () =>
   (<Menu>
     <div className="row">
