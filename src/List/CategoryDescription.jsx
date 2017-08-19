@@ -5,9 +5,10 @@ const Wrapper = styled.div`background-color: #f3f3f3;`;
 
 const Description = styled.div`
   max-width: 35rem;
-  padding: 4rem 0 0.5rem;
+  padding: 2rem 0 0.5rem;
 
   @media (min-width: 48rem) {
+    padding: 4rem 0 0.5rem;
   }
 `;
 
