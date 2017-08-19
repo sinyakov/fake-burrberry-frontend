@@ -18,16 +18,16 @@ const Link = styled(NavLink)`
   text-decoration: none;
 
   &.active {
-    padding-bottom: '15px';
-    border-bottom: '1px solid #000';
-    color: '#171717';
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000;
+    color: #171717;
   }
 `;
 
 export default () =>
   (<Menu>
     <Link to="/women">Women</Link>
-    <Link to="/men/clothing">Men</Link>
+    <Link to="/men">Men</Link>
     <Link to="/children">Children</Link>
     <Link to="/beauty">Beauty</Link>
     <Link to="/experience">Experience</Link>

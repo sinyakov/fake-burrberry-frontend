@@ -68,6 +68,7 @@ const Products = props =>
           (<div className="col-xs-6 col-md-3" key={card.id}>
             <ProductCard
               id={card.id}
+              image={card.image}
               label={card.label}
               title={card.title}
               avaliableColours={card.avaliableColours}

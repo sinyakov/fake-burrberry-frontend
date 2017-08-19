@@ -85,7 +85,7 @@ const LinkUnderlined = styled(Link)`
 const ProductCard = props =>
   (<Card>
     <Link to={`/men/clothing/${props.id}`}>
-      <Img src={`/media/list/${props.id}.jpg`} />
+      <Img src={props.image} />
     </Link>
     <LikeWrapper>
       <Label>
@@ -118,6 +118,7 @@ const ProductCard = props =>
 ProductCard.propTypes = {
   id: PropTypes.number.isRequired,
   label: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   avaliableColours: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
