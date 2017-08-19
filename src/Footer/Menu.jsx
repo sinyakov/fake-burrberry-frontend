@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { LGplus } from '../Responsive';
+import FindStore from './FindStore';
 
 const Menu = styled.div`
   display: none;
@@ -35,6 +37,8 @@ const Link = styled.a`
     margin: 0;
   }
 `;
+
+const Img = styled.img`max-width: 100%;`;
 
 export default () =>
   (<Menu>
@@ -72,5 +76,10 @@ export default () =>
           <Link href="/">Japan Only - SCTL indications</Link>
         </Nav>
       </div>
+      <LGplus>
+        <div className="col-md-3">
+          <FindStore />
+        </div>
+      </LGplus>
     </div>
   </Menu>);
