@@ -100,7 +100,7 @@ const ProductCard = props =>
     </Link>
     <Avaliable>
       <span>Available in </span>
-      <LinkUnderlined to={`/men/clothing/${props.id}`}>
+      <LinkUnderlined to={`${process.env.PUBLIC_URL}/men/clothing/${props.id}`}>
         {props.avaliableColours} colours
       </LinkUnderlined>
     </Avaliable>

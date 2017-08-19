@@ -16,6 +16,6 @@ const Link = styled(NavLink)`
 
 export default () =>
   (<div>
-    <Img src="/media/store.jpg" alt="Store" />
+    <Img src={`${process.env.PUBLIC_URL}/media/store.jpg`} alt="Store" />
     <Link to="/">Find a store</Link>
   </div>);
