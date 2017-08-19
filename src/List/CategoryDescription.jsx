@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link as RouteLink } from 'react-router-dom';
 
 const Wrapper = styled.div`background-color: #f3f3f3;`;
 
@@ -30,7 +31,14 @@ const Text = styled.p`
   }
 `;
 
-const Link = styled.a`color: #171717;`;
+const Link = styled(RouteLink)`
+  text-decoration: none;
+  color: #171717;
+`;
+
+const LinkUnderlined = styled(Link)`
+  text-decoration: underline;
+`;
 
 export default () =>
   (<Wrapper>
@@ -38,9 +46,10 @@ export default () =>
       <Description>
         <Header>Men’s Clothing</Header>
         <Text>
-          Explore our menswear collection for the season. Sculptural knitwear,{' '}
-          <Link href="/">sweatshirts</Link>, artist overalls and oversized cabans feature alongside
-          our signature trench coat in both heritage and seasonal... <Link href="/">More</Link>
+          Explore our menswear collection for the season. Sculptural <span>knitwear, </span>
+          <LinkUnderlined to="/">sweatshirts</LinkUnderlined>, artist overalls and oversized cabans
+          feature alongside our signature trench coat in both heritage and <span>seasonal... </span>
+          <LinkUnderlined to="/">More</LinkUnderlined>
         </Text>
       </Description>
     </div>

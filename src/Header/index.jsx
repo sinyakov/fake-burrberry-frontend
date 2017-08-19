@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../img/logo.svg';
 import { XSonly, MDminus, MDplus } from '../Responsive';
@@ -27,6 +28,11 @@ const Logo = styled.img`
   }
 `;
 
+const Link = styled(NavLink)`
+  text-decoration: none;
+  color: #171717;
+`;
+
 export default () =>
   (<div className="container">
     <Wrapper>
@@ -37,9 +43,9 @@ export default () =>
         <MDplus>
           <Country />
         </MDplus>
-        <a href="/">
+        <Link to="/">
           <Logo src={logo} alt="BURBERRY" />
-        </a>
+        </Link>
       </Header>
       <XSonly>
         <CategoryMenu />

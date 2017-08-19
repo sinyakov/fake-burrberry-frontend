@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Img = styled.img`
@@ -6,7 +7,7 @@ const Img = styled.img`
   margin-bottom: 1rem;
 `;
 
-const Link = styled.a`
+const Link = styled(NavLink)`
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.33;
@@ -16,5 +17,5 @@ const Link = styled.a`
 export default () =>
   (<div>
     <Img src="/media/store.jpg" alt="Store" />
-    <Link href="/">Find a store</Link>
+    <Link to="/">Find a store</Link>
   </div>);

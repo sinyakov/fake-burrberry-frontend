@@ -86,7 +86,7 @@ const Products = props =>
 
 Products.propTypes = {
   header: PropTypes.string.isRequired,
-  list: PropTypes.arrayOf(PropTypes.obj).isRequired,
+  list: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Products;

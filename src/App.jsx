@@ -2,7 +2,7 @@ import React from 'react';
 import 'normalize.css';
 import 'flexboxgrid2/flexboxgrid2.css';
 import Helmet from 'react-helmet';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ruLocaleData from 'react-intl/locale-data/ru';
@@ -16,15 +16,19 @@ addLocaleData(ruLocaleData);
 
 export default () =>
   (<IntlProvider locale="ru">
-    <Router>
+    <BrowserRouter>
       <div>
         <Helmet>
-          <title>Long Cotton Gabardine Car Coat | Men - Burberry</title>
+          <title>Burrberry</title>
         </Helmet>
         <Header />
-        <Route exact path="/products" component={List} />
-        <Route path="/products/:id" component={Show} />
+        <Switch>
+          <Route exact path="/:section/" component={List} />
+          <Route exact path="/:section/:category" component={List} />
+          <Route path="/:section/:category/:id" component={Show} />
+          <Redirect from="/" to="/men/clothing" />
+        </Switch>
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   </IntlProvider>);
