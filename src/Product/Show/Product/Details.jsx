@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import triangle from '../../img/triangle.svg';
+import triangle from '../../../img/triangle.svg';
 
 const Detail = styled.div`
   padding: 2rem 0;
@@ -87,7 +87,7 @@ const Divine = styled.hr`
 `;
 
 export default () =>
-  <div>
+  (<div>
     <Detail descr>
       <Button type="button">
         <Header opened>Description</Header>
@@ -95,18 +95,15 @@ export default () =>
       <Description>
         <p>A refined car coat crafted in protective cotton gabardine.</p>
         <p>
-          Invented by Thomas Burberry in 1879, cotton gabardine is a tightly
-          woven and breathable fabric that protects against wind and rain.
+          Invented by Thomas Burberry in 1879, cotton gabardine is a tightly woven and breathable
+          fabric that protects against wind and rain.
         </p>
-        <p>
-          Raglan sleeves and a concealed button closure complement the clean
-          tailored lines.
-        </p>
+        <p>Raglan sleeves and a concealed button closure complement the clean tailored lines.</p>
         <p>The piece is finished with a distinctive check undercollar.</p>
         <ul>
           <li>
-            Coat length: 98cm/38.6in. This is based on a size UK 48 as
-            proportions change slightly according to size.
+            Coat length: 98cm/38.6in. This is based on a size UK 48 as proportions change slightly
+            according to size.
           </li>
           <li>Outer: 100% cotton</li>
           <li>Check lining: 100% cotton</li>
@@ -121,8 +118,8 @@ export default () =>
     <Divine />
     <Detail shipping>
       <Button type="button">
-        <Header>Shipping & Returns</Header>
+        <Header>Delivery</Header>
       </Button>
     </Detail>
     <Divine />
-  </div>;
+  </div>);

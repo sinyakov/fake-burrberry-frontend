@@ -13,7 +13,7 @@ const Footer = styled.footer`
   }
 
   @media (min-width: 62rem) {
-    padding: 4rem 0;
+    padding: 4rem 0 3rem;
   }
 `;
 
@@ -27,12 +27,19 @@ const Button = styled.button`
   border: 0;
 `;
 
+const ButtonOption = styled.span`color: #171717;`;
+
 const ButtonCountry = styled(Button)`
   margin: 0 1.5rem 1rem 0;
   
   @media (min-width: 48rem) {
     margin-bottom: 0;
     margin-left: 0;
+  }
+
+  @media (min-width: 62rem) {
+    margin-top: 1rem;
+    margin-right: 3rem;
   }
 `;
 
@@ -41,6 +48,10 @@ const ButtonLanguage = styled(Button)`
   
   @media (min-width: 48rem) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 62rem) {
+    margin-top: 1rem;
   }
 `;
 
@@ -70,19 +81,18 @@ const Text = styled.p`
 `;
 
 export default () =>
-  <Footer>
+  (<Footer>
     <div className="container">
       <Menu />
-
       <ButtonCountry type="button">
-        Shipping country: Russian Federation
+        Shipping country: <ButtonOption>Russian Federation</ButtonOption>
       </ButtonCountry>
-
-      <ButtonLanguage type="button">Language: English</ButtonLanguage>
-
+      <ButtonLanguage type="button">
+        Language: <ButtonOption>English</ButtonOption>
+      </ButtonLanguage>
       <Contact href="#">
         <Header>Need help?</Header>
         <Text>Find out more and contact us</Text>
       </Contact>
     </div>
-  </Footer>;
+  </Footer>);

@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+import { LGplus } from '../Responsive';
+import FindStore from './FindStore';
 
 const Menu = styled.div`
   display: none;
@@ -20,7 +23,7 @@ const Header = styled.h3`
 
 const Nav = styled.nav`@media (min-width: 48rem) {margin-bottom: 0.5rem;}`;
 
-const Link = styled.a`
+const Link = styled(NavLink)`
   @media (min-width: 768px) {
     display: block;
     margin: 0 0 0.75rem;
@@ -37,40 +40,45 @@ const Link = styled.a`
 `;
 
 export default () =>
-  <Menu>
+  (<Menu>
     <div className="row">
       <div className="col-md-3">
         <Header>Customer service</Header>
         <Nav>
-          <Link href="/">Contact Us</Link>
-          <Link href="/">Payment</Link>
-          <Link href="/">Shipping</Link>
-          <Link href="/">Returns</Link>
-          <Link href="/">Faqs</Link>
-          <Link href="/">Live Chat</Link>
-          <Link href="/">The Burberry App</Link>
-          <Link href="/">Store Locator</Link>
+          <Link to="/">Contact Us</Link>
+          <Link to="/">Payment</Link>
+          <Link to="/">Shipping</Link>
+          <Link to="/">Returns</Link>
+          <Link to="/">Faqs</Link>
+          <Link to="/">Live Chat</Link>
+          <Link to="/">The Burberry App</Link>
+          <Link to="/">Store Locator</Link>
         </Nav>
       </div>
       <div className="col-md-3">
         <Header>Our company</Header>
         <Nav>
-          <Link href="/">Our History</Link>
-          <Link href="/">Burberry Group Plc</Link>
-          <Link href="/">Careers</Link>
-          <Link href="/">Corporate Responsibility</Link>
-          <Link href="/">Site Map</Link>
+          <Link to="/">Our History</Link>
+          <Link to="/">Burberry Group Plc</Link>
+          <Link to="/">Careers</Link>
+          <Link to="/">Corporate Responsibility</Link>
+          <Link to="/">Site Map</Link>
         </Nav>
       </div>
       <div className="col-md-3">
         <Header>Legal & Cookies</Header>
         <Nav>
-          <Link href="/">Terms & Conditions</Link>
-          <Link href="/">Privacy Policy</Link>
-          <Link href="/">Cookie Policy</Link>
-          <Link href="/">Accessibility Statement</Link>
-          <Link href="/">Japan Only - SCTL indications</Link>
+          <Link to="/">Terms & Conditions</Link>
+          <Link to="/">Privacy Policy</Link>
+          <Link to="/">Cookie Policy</Link>
+          <Link to="/">Accessibility Statement</Link>
+          <Link to="/">Japan Only - SCTL indications</Link>
         </Nav>
       </div>
+      <LGplus>
+        <div className="col-md-3">
+          <FindStore />
+        </div>
+      </LGplus>
     </div>
-  </Menu>;
+  </Menu>);

@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Message = styled.div`
+const Wrapper = styled.div`
   margin: 0 0 1.5rem;
 
   &:last-child {
@@ -21,12 +22,19 @@ const Text = styled.p`
   line-height: 1.333333333;
 `;
 
-export default props =>
-  <Message>
+const Message = props =>
+  (<Wrapper>
     <Header>
       {props.header}
     </Header>
     <Text>
       {props.text}
     </Text>
-  </Message>;
+  </Wrapper>);
+
+Message.propTypes = {
+  header: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
+
+export default Message;

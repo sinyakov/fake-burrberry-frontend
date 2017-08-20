@@ -1,35 +1,54 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../img/logo.svg';
+import { XSonly, MDminus, MDplus } from '../Responsive';
+import CategoryMenu from './CategoryMenu';
 
-const Header = styled.header`
-  font-size: 0;
-  text-align: center;
-  border-bottom: solid 1px #c6c6c6;
+import CountrySelector from './CountrySelector';
+import Menu from './Menu';
 
-  @media (min-width: 62rem) {
-    border-bottom: none;
-  }
-`;
+const Wrapper = styled.div`position: relative;`;
+
+const Header = styled.header`text-align: center;`;
 
 const Logo = styled.img`
-  height: 10px;
-  margin: 1rem auto;
+  display: flex;
+  height: 12px;
+  margin: 1.125rem auto;
   object-fit: contain;
 
   @media (min-width: 48rem) {
+    height: 16px;
     margin: 1.5rem auto;
   }
 
   @media (min-width: 62rem) {
-    height: 16px;
     margin: 2rem auto;
   }
 `;
 
+const Link = styled(NavLink)`
+  text-decoration: none;
+  color: #171717;
+`;
+
 export default () =>
-  <Header>
-    <a href="/">
-      <Logo src={logo} alt="BURBERRY" />
-    </a>
-  </Header>;
+  (<div className="container">
+    <Wrapper>
+      <Header>
+        <MDminus>
+          <Menu />
+        </MDminus>
+        <MDplus>
+          <CountrySelector />
+        </MDplus>
+        <Link to="/">
+          <Logo src={logo} alt="BURBERRY" />
+        </Link>
+      </Header>
+      <XSonly>
+        <CategoryMenu />
+      </XSonly>
+    </Wrapper>
+  </div>);

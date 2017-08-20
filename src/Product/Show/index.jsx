@@ -6,11 +6,11 @@ import Delivery from './Delivery';
 import More from './More';
 
 export default () =>
-  <main>
+  (<main>
     <Product />
     <div className="container">
       <Delivery />
       <Recommend />
       <More />
     </div>
-  </main>;
+  </main>);

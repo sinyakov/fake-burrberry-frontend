@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Colour = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   margin: 0;
   padding: 0 0 1rem;
@@ -45,8 +46,8 @@ const Option = styled.button`
   }
 `;
 
-export default props =>
-  <Colour>
+const Colour = props =>
+  (<Wrapper>
     <Text>
       <span>Colour: </span>
       <ColourValue>
@@ -55,14 +56,21 @@ export default props =>
     </Text>
     <Options>
       {props.colours.map((colour, index) =>
-        <Option
-          key={index}
+        (<Option
+          key={colour.name}
           style={{ background: colour.hex }}
           active={index === props.activeColourIndex}
           type="button"
         >
           {colour.name}
-        </Option>
+        </Option>),
       )}
     </Options>
-  </Colour>;
+  </Wrapper>);
+
+Colour.propTypes = {
+  activeColourIndex: PropTypes.number.isRequired,
+  colours: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+export default Colour;
